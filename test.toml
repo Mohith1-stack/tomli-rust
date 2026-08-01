@@ -1,0 +1,10 @@
+title = "TOML CLI Demo"
+
+[server]
+host = "127.0.0.1"
+port = 8080
+
+[database]
+url = "postgres://user:pass@localhost/db"
+max_connections = 100
+enabled = true

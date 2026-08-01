@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomli-Rust Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Tomli-Rust</div>
+        <p>A blazingly fast TOML parser written in Rust, running in your browser via WebAssembly.</p>
+        <div style="flex:1"></div>
+        <button id="run-btn" class="run-btn">▶ RUN PARSER</button>
+    </header>
+
+    <main class="playground-container">
+        <div class="pane editor-pane">
+            <div class="pane-header">
+                <span>Input (TOML)</span>
+            </div>
+            <textarea id="toml-input" spellcheck="false">[server]
+host = "127.0.0.1"
+port = 8080
+
+[database]
+url = "postgres://user:pass@localhost/db"
+max_connections = 100
+enabled = true
+
+[features]
+experimental = ["async", "websockets"]
+
+# Try editing me and click RUN!</textarea>
+        </div>
+
+        <div class="pane output-pane">
+            <div class="pane-header">
+                <span>Output (JSON)</span>
+                <span id="status-badge" class="badge success">Waiting...</span>
+            </div>
+            <pre id="json-output">// Output will appear here when you run the parser...</pre>
+        </div>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
