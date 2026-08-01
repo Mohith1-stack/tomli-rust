@@ -6,6 +6,7 @@ use crate::tokenizer::{Token, Tokenizer};
 use crate::value::{Table, Value};
 
 /// Tracks namespace immutability as defined in Python `tomli`'s `Flags` class.
+#[derive(Default)]
 pub struct Flags {
     frozen: HashSet<Vec<String>>,
     explicit_nests: HashSet<Vec<String>>,
@@ -14,15 +15,6 @@ pub struct Flags {
 impl Flags {
     pub fn new() -> Self {
         Self::default()
-    }
-}
-
-impl Default for Flags {
-    fn default() -> Self {
-        Self {
-            frozen: HashSet::new(),
-            explicit_nests: HashSet::new(),
-        }
     }
 }
 
