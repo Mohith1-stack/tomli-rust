@@ -1,0 +1,11 @@
+[package]
+name = "tomli-rust"
+version = "0.1.0"
+edition = "2021"
+description = "A production-quality TOML parser migrated from Python Tomli"
+authors = ["Port Mortem Hackathon"]
+
+[dependencies]
+# 100% dependency-free as per architectural constraints
+
+
