@@ -8,4 +8,9 @@ authors = ["Port Mortem Hackathon"]
 [dependencies]
 # 100% dependency-free as per architectural constraints
 
+[dev-dependencies]
+criterion = "0.5"
 
+[[bench]]
+name = "parse"
+harness = false
